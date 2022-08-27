@@ -1,15 +1,24 @@
-import Footer from "./components/footer/Footer";
+// import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import Homepage from "./Pages/homepage/Homepage";
+import { useState } from 'react';
+// import Homepage from "./Pages/homepage/Homepage";
+import "./app.scss";
 
 
 function App() {
+
+	const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    }
+
 	return (
-		<>
-			<Header />
+		<div className={ isOpen ? "dark-back" : "" }>
+			<Header toggleMenu={toggleMenu} isOpen={isOpen} />
 			{/* <Homepage />
 			<Footer /> */}
-		</>
+		</div>
 	);
 }
 
