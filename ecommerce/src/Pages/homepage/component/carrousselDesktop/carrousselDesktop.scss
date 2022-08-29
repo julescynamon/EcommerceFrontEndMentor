@@ -2,6 +2,7 @@
     width: 400px;
     height: 400px;
     border-radius: 13px;
+    cursor: pointer;
 
     & img {
         width: 100%;
@@ -27,14 +28,16 @@
         cursor: pointer;
 
         &:hover {
-            filter: opacity(50%);
-            -webkit-filter: opacity(50%);
+            filter: opacity(0.5);
+            -webkit-filter: opacity(0.5);
         }
 
-        &.active {
-            border: 2px solid var(--orange);
-            filter: opacity(50%);
-            -webkit-filter: opacity(50%);
-        }
+
     }
+}
+
+.active {
+    filter: opacity(0.35);
+    -webkit-filter: opacity(0.35);
+    border: 3px solid var(--orange);
 }
