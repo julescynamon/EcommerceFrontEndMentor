@@ -24,5 +24,17 @@
         height: 70px;
         border-radius: 13px;
         margin-top: 20px;
+        cursor: pointer;
+
+        &:hover {
+            filter: opacity(50%);
+            -webkit-filter: opacity(50%);
+        }
+
+        &.active {
+            border: 2px solid var(--orange);
+            filter: opacity(50%);
+            -webkit-filter: opacity(50%);
+        }
     }
 }
