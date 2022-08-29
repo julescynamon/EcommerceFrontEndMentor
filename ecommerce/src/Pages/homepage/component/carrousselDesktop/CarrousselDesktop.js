@@ -5,7 +5,7 @@ export default function CarrousselDesktop() {
     const [imgClick, setImgClick] = useState("/img/image-product-1.jpg");
 
     return (
-        <>
+        <div>
             <div className="image">
                 <img src={ imgClick } alt="" />
             </div>
@@ -23,6 +23,6 @@ export default function CarrousselDesktop() {
                     setImgClick("/img/image-product-4.jpg")
                 } } src="/img/image-product-4-thumbnail.jpg" alt="" />
             </div>
-        </>
+        </div>
     )
 }

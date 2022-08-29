@@ -12,11 +12,11 @@
     --light-grayish-blue: hsl(223, 64%, 98%);
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
-    --black-background: hsl(0, 0%, 75%);
+    --black-background: hsla(0, 0%, 54%, 0.874);
 
     // ### Text
 
     --text-color: var(--black);
-    --paragraph-color: var(--grayish-blue);
+    --paragraph-color: var(--dark-grayish-blue);
     --font-family: 'Kumbh Sans', sans-serif;
 }
