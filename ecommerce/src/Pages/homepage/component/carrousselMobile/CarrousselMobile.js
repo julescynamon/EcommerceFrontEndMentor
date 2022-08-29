@@ -1,3 +1,5 @@
+import { images } from '../../../../data/images';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -16,10 +18,10 @@ export default function App() {
     return (
         <>
         <Swiper navigation={true} loop={true} modules={[Navigation]} className="mySwiper">
-            <SwiperSlide><img src="/img/image-product-1.jpg" alt="" /></SwiperSlide>
-            <SwiperSlide><img src="/img/image-product-2.jpg" alt="" /></SwiperSlide>
-            <SwiperSlide><img src="/img/image-product-3.jpg" alt="" /></SwiperSlide>
-            <SwiperSlide><img src="/img/image-product-4.jpg" alt="" /></SwiperSlide>
+            <SwiperSlide><img src={images[0].png} alt="" /></SwiperSlide>
+            <SwiperSlide><img src={images[1].png} alt="" /></SwiperSlide>
+            <SwiperSlide><img src={images[2].png} alt="" /></SwiperSlide>
+            <SwiperSlide><img src={images[3].png} alt="" /></SwiperSlide>
         </Swiper>
         </>
     );

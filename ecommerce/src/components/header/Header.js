@@ -1,14 +1,15 @@
-import React from 'react';
-// import { useState } from 'react';
+import React,{ useState } from 'react';
+import ToogleCart from "./cart/ToogleCart";
 import "./header.scss";
 
-export default function Header( { toggleMenu, isOpen  } ) {
+export default function Header( ) {
 
-    // const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [openCart, setOpenCart] = useState(false);
 
-    // const toggleMenu = () => {
-    //     setIsOpen(!isOpen);
-    // }
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    }
 
     return (
         <div className="header-container">  
@@ -28,11 +29,21 @@ export default function Header( { toggleMenu, isOpen  } ) {
                 </ul>
             </nav>
             <div className="navbar__cart">
-                <img src="img/icon-cart.svg" alt="panier" />
+                <img onClick={setOpenCart(true)} src="img/icon-cart.svg" alt="panier" />
+                {/* {
+                    cartProductQuantity > 0 && (
+                        <span className="cart-basket">{ cartProductQuantity }</span>
+                    )
+                } */}
             </div>
             <div className="navbar__avatar">
                 <img src="img/image-avatar.png" alt="avatar" />
             </div>
+            {openCart && (
+					<ToogleCart
+						setOpenCart={setOpenCart}
+					/>
+				)}
         </div>
     )
 }

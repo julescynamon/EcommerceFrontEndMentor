@@ -3,72 +3,103 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vw;
     background: rgba(0, 0, 0, 0.5);
     z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-left: 50px;
 }
 
 
 
 .container-slider {
-    max-width: 700px;
-    height: 500px;
-    margin: 100px auto 0;
-    position: relative;
+    max-width: 436px;
+    height: 436px;
+    margin: 60px auto 0;
     overflow: hidden;
+
+    &>svg {
+        margin-left: 400px;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
 }
 
+path {
+    &:hover {
+        fill: var(--orange);
+    }
+}
 
 .slide {
-    width: 100%;
-    height: 100%;
+    width: 395px;
+    height: 400px;
     position: absolute;
     opacity: 0;
     transition: opacity ease-in-out 0.4s;
+
+    &>img {
+        width: 100%;
+        height: 100%;
+        border-radius: 13px;
+        object-fit: cover;
+    }
 }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .active-anim {
     opacity: 1;
 }
 
 .btn-slide {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #f1f1f1;
-    border: 1px solid rgba(34, 34, 34, 0.287);
+    cursor: pointer;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    width: 56px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: none;
+
+    &>img {
+        width: 20px;
+        height: 20px;
+        pointer-events: none;
+    }
 }
 
-.btn-slide img {
-    width: 20px;
-    height: 20px;
-    pointer-events: none;
-}
 
 .prev {
-    top: 50%;
-    left: 20px;
-    transform: translateY(-60%);
+    top: 25%;
+    left: 33%;
 }
 
 .next {
-    top: 50%;
-    right: 20px;
-    transform: translateY(-60%);
+    top: 25%;
+    right: 32%;
+
 }
 
-.img-thumbnail {}
+.img-thumbnail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto;
+
+    & img {
+        width: 70px;
+        height: 70px;
+        border-radius: 13px;
+        margin-top: 20px;
+        cursor: pointer;
+
+        &:hover {
+            filter: opacity(0.5);
+            -webkit-filter: opacity(0.5);
+        }
+
+
+    }
+}
