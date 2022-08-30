@@ -1,11 +1,13 @@
 import React,{ useState } from 'react';
 import ToogleCart from './cart/ToogleCart';
+
 import "./header.scss";
 
-export default function Header( ) {
+export default function Header( { cartProductQuantity, setCartProductQuantity } ) {
 
     const [isOpen, setIsOpen] = useState(false);
     const [openCart, setOpenCart] = useState(false);
+    
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -39,7 +41,7 @@ export default function Header( ) {
             </nav>
             <div className="navbar__cart">
                 <img src="img/icon-cart.svg" alt="panier" onClick={ toggleCart }/>
-                <span className="quantity">0</span>
+                { cartProductQuantity > 0 ? <span className="quantity">{ cartProductQuantity }</span> : null }
             </div>
             <div className="navbar__avatar">
                 <img src="img/image-avatar.png" alt="avatar" />
@@ -47,6 +49,8 @@ export default function Header( ) {
             {openCart && (
 					<ToogleCart
 						toggleCart={toggleCart}
+                        cartProductQuantity={cartProductQuantity}
+                        setCartProductQuantity={setCartProductQuantity}
 					/>
 				)}
         </div>
