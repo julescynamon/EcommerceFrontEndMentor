@@ -15,6 +15,11 @@ export default function Homepage({ productQuantity, setProductQuantity, setCartP
         .addEventListener('change', e => setMatches( e.matches ));
     }, []);
 
+    const handleAddToCart = () => {
+		setCartProductQuantity((prevState) => prevState + productQuantity);
+		setProductQuantity(0);
+	};
+
 
 
     return (
@@ -34,11 +39,23 @@ export default function Homepage({ productQuantity, setProductQuantity, setCartP
                 <div className="initial-price">$250.00</div>
                 <div className="command-container">
                     <div className="command-container__quantity">
-                        <img className="minus" src="/img/icon-minus.svg" alt="" />
-                        0
-                        <img className="plus" src="/img/icon-plus.svg" alt="" />
+                        <img 
+                            className="minus" 
+                            src="/img/icon-minus.svg" 
+                            alt="" 
+                            onClick={() =>
+									setProductQuantity((prevState) => (prevState !== 0 ? prevState - 1 : 0))
+								}
+                        />
+                        {productQuantity}
+                        <img 
+                            className="plus"   
+                            src="/img/icon-plus.svg" 
+                            alt="" 
+                            onClick={() => setProductQuantity((prevState) => prevState + 1)}
+                            />
                     </div>
-                    <button className="command-container__command">
+                    <button className="command-container__command" onClick={handleAddToCart}>
                         <img src="/img/icon-cart-2.svg" alt="" />
                         Add to cart
                     </button>
