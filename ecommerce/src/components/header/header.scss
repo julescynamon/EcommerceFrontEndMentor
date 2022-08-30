@@ -95,6 +95,27 @@
     cursor: pointer;
 }
 
+.quantity {
+    background-color: var(--orange);
+    color: var(--white);
+    border-radius: 50%;
+    width: 18px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    position: absolute;
+    top: 23px;
+    right: 135px;
+
+    @media screen and (max-width: 468px) {
+        right: 72px;
+    }
+
+}
+
+
 .navbar__avatar {
     width: 40px;
     height: 40px;

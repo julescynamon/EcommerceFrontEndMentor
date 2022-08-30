@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "./toogleCart.scss";
 
 export default function ToogleCart({ setOpenCart, cartProductQuantity, setCartProductQuantity }) {
     return (
@@ -6,7 +7,7 @@ export default function ToogleCart({ setOpenCart, cartProductQuantity, setCartPr
             <div className="cart__heading">
                 <h3>Cart</h3>
             </div>
-            <div className="cart-item">
+            <div className="cart__item">
                 <p>Your cart is empty !</p>
             </div>
         </div>

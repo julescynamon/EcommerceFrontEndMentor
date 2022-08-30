@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import ToogleCart from "./cart/ToogleCart";
+import ToogleCart from './cart/ToogleCart';
 import "./header.scss";
 
 export default function Header( ) {
@@ -9,6 +9,15 @@ export default function Header( ) {
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+        if (isOpen) {
+            document.body.style.overflow = "auto";
+        } else {
+            document.body.style.overflow = "hidden";
+        }
+    }
+
+    const toggleCart = () => {
+        setOpenCart(!openCart);
     }
 
     return (
@@ -29,19 +38,15 @@ export default function Header( ) {
                 </ul>
             </nav>
             <div className="navbar__cart">
-                <img onClick={setOpenCart(true)} src="img/icon-cart.svg" alt="panier" />
-                {/* {
-                    cartProductQuantity > 0 && (
-                        <span className="cart-basket">{ cartProductQuantity }</span>
-                    )
-                } */}
+                <img src="img/icon-cart.svg" alt="panier" onClick={ toggleCart }/>
+                <span className="quantity">0</span>
             </div>
             <div className="navbar__avatar">
                 <img src="img/image-avatar.png" alt="avatar" />
             </div>
             {openCart && (
 					<ToogleCart
-						setOpenCart={setOpenCart}
+						toggleCart={toggleCart}
 					/>
 				)}
         </div>

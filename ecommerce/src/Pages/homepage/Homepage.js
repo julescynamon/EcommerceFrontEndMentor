@@ -3,7 +3,7 @@ import CarrousselDesktop from './component/carrousselDesktop/CarrousselDesktop';
 import CarrousselMobile from './component/carrousselMobile/CarrousselMobile';
 import './homepage.scss';
 
-export default function Homepage() {
+export default function Homepage({ productQuantity, setProductQuantity, setCartProductQuantity }) {
 
     const [matches, setMatches] = useState(
         window.matchMedia("(min-width: 768px)").matches
