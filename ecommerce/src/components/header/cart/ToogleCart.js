@@ -20,26 +20,23 @@ export default function ToogleCart({ toggleCart, cartProductQuantity, setCartPro
             </div>
         ) : (
             <div>
-                <div className="cart__item">
-                    <div className="cart__item__img">
+                <div className="item-full">
+                    <div className="item-img">
                         <img src={productImage} alt="product" />
                     </div>
-                    <div className="cart__item__info">
-                        <p className="cart__item__info__name">Fall Limited Edition Sneakers</p>
-                        <p className="cart__item__info__price">$125.00 X {cartProductQuantity}</p>
-                        <p>${125 * cartProductQuantity}.00</p>
+                    <div className="item-info">
+                        <p className="item-info__name">Fall Limited Edition Sneakers</p>
+                        <p className="item-info__price">$125.00 X {cartProductQuantity}</p>
+                        <p className="item-info__total">${125 * cartProductQuantity}.00</p>
                     </div>
-                    <div className="cart__item__delete">
+                    <div className="item-delete">
                         <img src="/img/icon-delete.svg" alt="" onClick={
                             () => setCartProductQuantity(0)
                         }/>
                     </div>
                 </div>
-                <div className="cart__button">
-                    <button className="cart__button__checkout">Checkout</button>
-                </div>
+                    <button className="button-check">Checkout</button>
             </div>
-            
         )
         }
         </div>
