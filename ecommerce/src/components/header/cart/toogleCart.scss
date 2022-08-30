@@ -12,6 +12,12 @@
     border-radius: 0.5rem;
     box-shadow: 1px 10px 15px 5px var(--black-background);
 
+    @media screen and (max-width: 768px) {
+        top: 20%;
+    }
+
+
+
     &__heading {
         display: flex;
         justify-content: space-between;

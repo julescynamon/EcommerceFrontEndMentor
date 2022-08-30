@@ -93,6 +93,13 @@
 .navbar__cart {
     margin-right: 2rem;
     cursor: pointer;
+
+    & img {
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 }
 
 .quantity {
