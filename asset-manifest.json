@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/https//julescynamon.github.io/EcommerceFrontEndMentor/static/css/main.eed2833b.css",
+    "main.js": "/https//julescynamon.github.io/EcommerceFrontEndMentor/static/js/main.435bc769.js",
+    "static/media/image-product-2.jpg": "/https//julescynamon.github.io/EcommerceFrontEndMentor/static/media/image-product-2.c8bb0aaccecdebb16596.jpg",
+    "static/media/image-product-1.jpg": "/https//julescynamon.github.io/EcommerceFrontEndMentor/static/media/image-product-1.520cc50bd13955f55cb2.jpg",
+    "static/media/image-product-3.jpg": "/https//julescynamon.github.io/EcommerceFrontEndMentor/static/media/image-product-3.af5c71ba9ffcc0b8b54d.jpg",
+    "static/media/image-product-4.jpg": "/https//julescynamon.github.io/EcommerceFrontEndMentor/static/media/image-product-4.9962862ef3eff6d65e5b.jpg",
+    "index.html": "/https//julescynamon.github.io/EcommerceFrontEndMentor/index.html",
+    "static/media/icon-previous.svg": "/https//julescynamon.github.io/EcommerceFrontEndMentor/static/media/icon-previous.80616402c611cc0a6651d0b751da8a9b.svg",
+    "static/media/icon-next.svg": "/https//julescynamon.github.io/EcommerceFrontEndMentor/static/media/icon-next.9621183a551a9985b4bd7536c9a69c66.svg",
+    "main.eed2833b.css.map": "/https//julescynamon.github.io/EcommerceFrontEndMentor/static/css/main.eed2833b.css.map",
+    "main.435bc769.js.map": "/https//julescynamon.github.io/EcommerceFrontEndMentor/static/js/main.435bc769.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eed2833b.css",
+    "static/js/main.435bc769.js"
+  ]
+}
